@@ -5,13 +5,13 @@ package com.javaex.basics;
 public class Types {
 	static final int SPEED_LIMIT = 120; // 상수
 	public static void main(String[] args) {
-//		varEx();
-//		integerEx(); 
-//		floatDoubleEx();
-//		booleanEx();
-//		charEx();
-//		constantEx();
-//		promotionEx();
+		varEx();
+		integerEx(); 
+		floatDoubleEx();
+		booleanEx();
+		charEx();
+		constantEx();
+		promotionEx();
 		castingEx();
 	}
 	
