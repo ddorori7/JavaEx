@@ -14,6 +14,7 @@ public class ConditionalEx {
 		switchEx3("TUESDAY");
 	}
 	
+	
 	private static void switchEx3(String day) {
 		// day가 SUNDAY -> 휴식
 		//		MONDAY ~ THURSDAY -> 열공
