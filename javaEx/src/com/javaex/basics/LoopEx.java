@@ -10,8 +10,8 @@ public class LoopEx {
 //		doWhileEx();
 //		forGugu();
 //		continueEx();
-		practiceEx1();
-//		practiceEx2();
+//		practiceEx1();
+		practiceEx2();
 		System.out.println("End of Code");
 	}
 	
@@ -37,11 +37,23 @@ public class LoopEx {
 	
 	private static void practiceEx2() {
 		
-		for (int i = 1; i <= 6; i++) {		
+//		for (int i = 1; i <= 6; i++) {		
+//		
+//			for (int j = 1; j <= i; j++) {
+//				System.out.print("*");				
+//			}
+//			System.out.println();
+//		}
 		
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");				
+		int i = 1, j = 0;
+		while (i <= 6) {
+			System.out.print("*"); // 여기서 별하나
+			while (j <= i - 2) {
+				System.out.print("*"); // 여기서 별하나 출력해서 51번째 줄에서 -2를 해준다.
+				j++;
 			}
+			i++;
+			j = 0;
 			System.out.println();
 		}
 				
@@ -55,6 +67,7 @@ public class LoopEx {
 				continue;
 			System.out.println(i);
 		}
+		
 		
 	}
 	
