@@ -24,6 +24,7 @@ public class ConsoleEx {
 		
 		scanner.close();
 	}
+	
 	private static void consoleInputEx() {
 		// 표준 입력: stdin -> System.in
 		Scanner scanner = new Scanner(System.in);
@@ -37,8 +38,8 @@ public class ConsoleEx {
 		// 중요: 시스템 자원을 사용하는 클래스는 사용 이후 반드시 닫아주자
 		scanner.close();
 		
-		
 	}
+	
 	private static void consoleOutputEx() {
 		// 표준 출력: stdout -> System.out
 		// 표준 에러: stderr -> System.err
