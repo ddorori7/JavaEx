@@ -46,8 +46,8 @@ public class ArrayEx {
 //			System.out.print(source[i] + "\t");
 //		}
 		// Enhanced For
-		for (int value: source) {
-			System.out.println(value + "\t");
+		for (int value:source) {
+			System.out.print(value + "\t");
 		}
 		System.out.println();
 		
@@ -57,7 +57,7 @@ public class ArrayEx {
 //			System.out.print(target[i] + "\t");
 //		}
 		for (int value:target) {
-			System.out.println(value + "\t");
+			System.out.print(value + "\t");
 		}
 		System.out.println();
 	}
