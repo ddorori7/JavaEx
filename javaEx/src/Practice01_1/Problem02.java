@@ -15,6 +15,7 @@ public class Problem02 {
 			System.out.println();
 		}
 		input.close();
+		
 	}
 
 }

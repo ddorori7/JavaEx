@@ -32,6 +32,7 @@ public class Problem05 {
 				}
 			}
 		}
+		scanner.close();
 		System.out.println("최대값은 " + max + "입니다.");
 		
 		
