@@ -36,8 +36,9 @@ public class Problem07 {
 		System.out.println("게임을 종료하시겠습니다?(y/n) >>");
 		String yesNo = scanner.next();
 		
+		
 		//
-		if (yesNo.equals("n")) {
+		if (yesNo == "n") {
 			 random = (int)(Math.random() * 100 + 1);
 //	    	System.out.println(random);
 			
@@ -61,14 +62,14 @@ public class Problem07 {
 			System.out.println("게임을 종료하시겠습니다?(y/n) >>");
 			yesNo = scanner.next();
 			
-		} else {
+		} else if(yesNo == "y") { //TODO 여기 다시
 
 			System.out.println("========================");
 			System.out.println("[숫자맞추기게임 종료]");
 			System.out.println("========================");
 			
 		}
-			
+		scanner.close();	
 	}
 
 }
