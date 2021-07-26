@@ -1,5 +1,6 @@
 package com.javaex.exception;
 
+import java.io.*;
 import java.util.*;
 
 public class ExceptionEx {
@@ -7,7 +8,39 @@ public class ExceptionEx {
 	public static void main(String[] args) {
 //		arithExceptionEx();
 //		NullPointerExceptionEx();
-		arrayIndexExceptionEx();
+//		arrayIndexExceptionEx();
+		throwExceptEx();
+		
+	}
+	
+	private static void throwExceptEx() {
+		ThrowExcept except = new ThrowExcept();
+		
+		try {
+			double result = except.divide(100, 0);
+			except.executeRuntimeException();
+			// except의 executeException 메서드내의 예외를 대신 처리
+			except.executeException(); 
+			
+		} catch(CustomArithmeticException e) {
+			System.err.println(e.getMessage());
+			System.err.printf("num1: %d%n", e.getNum1());
+			System.err.printf("num2: %d%n", e.getNum2());
+
+		} catch (ArithmeticException e) {
+			System.err.println(e.getMessage());
+			System.err.println("0으로는 나눌 수 없습니다.");
+			
+		} catch (IOException e) {// Checked Exception은 반드시 예외처리 해줘야함
+			System.err.println(e.getMessage());
+			
+		} catch (RuntimeException e) {
+			System.err.println(e.getMessage());
+			
+		}
+		
+		System.out.println("End of Code");
+		
 	}
 	
 	private static void arrayIndexExceptionEx() {
