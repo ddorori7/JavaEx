@@ -1,7 +1,5 @@
 package com.javaex.api.objectclass.rectangle;
 
-import com.javaex.api.objectclass.circle.*;
-
 public class Rectangle {
 	
 	int width;
