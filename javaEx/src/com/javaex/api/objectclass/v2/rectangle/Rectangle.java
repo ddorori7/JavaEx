@@ -1,9 +1,9 @@
 package com.javaex.api.objectclass.v2.rectangle;
 
-public class Rectangle {
+public class Rectangle implements Cloneable {
 	
-	private int width;
-	private int height;
+	int width;
+	int height;
 	
 	public Rectangle(int width, int height) {
 		this.width = width;
@@ -26,6 +26,14 @@ public class Rectangle {
 		return "Rectangle [width=" + width + ", height=" + height + "]";
 	}
 	
-	
+	public Rectangle getClone() { // 얕은복제
+		Rectangle clone = null;
+		try {
+			clone = (Rectangle)clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return clone;
+	}
 
 }

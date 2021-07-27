@@ -1,5 +1,7 @@
 package com.javaex.api.objectclass.v2.rectangle;
 
+
+
 public class RectangleApp {
 
 	public static void main(String[] args) {
@@ -14,6 +16,19 @@ public class RectangleApp {
 		System.out.println(a.equals(d));
 		System.out.println(d.equals(c));
 
+		
+
+		// Rectangle 클론 테스트
+		Rectangle r1 = new Rectangle(100,200);
+		System.out.println("r1 = " + r1);
+		Rectangle r2 = r1.getClone();
+		System.out.println("r2 = " + r2);
+		
+		r2.width = 300;
+		System.out.println("r1 = " + r1);
+		System.out.println("r2 = " + r2);
+		
+		System.out.println("r1 == r2 ?  " + (r1 == r2));
 	}
 
 }
