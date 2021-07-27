@@ -1,4 +1,4 @@
-package com.javaex.api.objectclass.rectangle;
+package com.javaex.api.objectclass.v2.rectangle;
 
 public class RectangleApp {
 

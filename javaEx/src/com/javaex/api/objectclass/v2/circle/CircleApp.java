@@ -1,4 +1,4 @@
-package com.javaex.api.objectclass.circle;
+package com.javaex.api.objectclass.v2.circle;
 
 public class CircleApp {
 
