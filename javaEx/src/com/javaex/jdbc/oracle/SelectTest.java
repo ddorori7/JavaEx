@@ -23,7 +23,14 @@ public class SelectTest {
 			// 5. 실행
 			rs = stmt.executeQuery(sql);
 			
-			System.out.println(rs);
+//			System.out.println(rs);
+			// 루프 후 출력
+			while (rs.next()) { // 다음 레코드 가져오기
+				int deptId = rs.getInt(1); // 컬럼 순서로 가져오기
+				String deptName = rs.getString("department_name");
+				// 컬럼 이름으로 가져오기
+				System.out.printf("%d:%s%n", deptId, deptName);
+			}
 		} catch (ClassNotFoundException e) {
 			System.err.println("드라이버 로드 실패!");
 		} catch (SQLException e) {
