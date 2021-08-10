@@ -1,10 +1,11 @@
 package com.javaex.io.bytestream;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileClassEx {
-
+	
 	static final String rootPath = System.getProperty("user.dir") + "\\files\\"; 
 	public static void main(String[] args) {
 		// 파일 객체

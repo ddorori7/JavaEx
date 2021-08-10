@@ -23,7 +23,7 @@ public class WrapperEx {
 		Integer i2 = 10;
 		// -> Integer i2 = Integer.valueOf(10);
 		
-		// patse 계열 메서드: 변환
+		// parse 계열 메서드: 변환
 		System.out.println(Integer.parseInt("-123")); // 문자열 -> 정수형
 		System.out.println(Integer.parseInt("FF", 16)); // 16진수 문자열 -> 정수
 		System.out.println(Integer.toBinaryString(2021)); // 정수 -> 이진수 문자열

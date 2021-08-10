@@ -74,7 +74,7 @@ public class StringEx {
 			System.out.println("WORD: " + word);
 		}
 		
-		// 문자열 비교(중요): Unicode의 비교
+		// 문자열 비교(중요): Unicode의 비교.
 		System.out.println("ABC".compareTo("ABE"));
 		// 결과가 == 0 : 순서가 같다
 		// 음수면  < 0 : 순서가 앞이다

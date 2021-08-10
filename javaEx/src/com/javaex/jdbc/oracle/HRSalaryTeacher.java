@@ -4,12 +4,10 @@ import java.sql.*;
 
 import java.util.Scanner;
 
-public class HRSalary {
+public class HRSalaryTeacher {
 
 	public static void main(String[] args) {
-
 		String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
-		// 커넥션 개체
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -18,38 +16,34 @@ public class HRSalary {
 
 		System.out.print("최소급여:");
 		int minSalary = scanner.nextInt();
-
-		System.out.print("최고급여:");
+		System.out.print("최대급여:");
 		int maxSalary = scanner.nextInt();
 
-		// 추가
 		if (minSalary > maxSalary) {
-			// 값을 바꾼다
+			//	값을 바꾼다
 			int temp = minSalary;
 			minSalary = maxSalary;
 			maxSalary = temp;
 		}
 
 		try {
-			// 드라이버 로드
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(dburl, "c##hr", "hr");
-			// 실행계획
-			String sql = "select first_name || ' ' || last_name as name," + "salary" + " from employees"
-					+ " where salary >= " + minSalary + "and salary <=" + maxSalary + " order by salary asc";
+			conn = DriverManager.getConnection(dburl, "hr", "hr");
 
+			String sql = "SELECT first_name || ' ' || last_name as name, salary " +
+					" FROM employees " +
+					" WHERE salary BETWEEN " + minSalary + " AND " + maxSalary + 
+					" ORDER BY salary";
 			stmt = conn.createStatement();
-			// 실행
 			rs = stmt.executeQuery(sql);
 
-			while (rs.next()) {
-				String name = rs.getString("name");
-				int salary = rs.getInt("salary");
-
-				System.out.printf("%s\t\t%d%n", name, salary);
+			while(rs.next()) {
+				System.out.printf("%s\t%d%n", 
+						rs.getString("name"), 
+						rs.getInt(2));
 			}
 		} catch (ClassNotFoundException e) {
-			System.err.println("드라이브 로드 실패!");
+			System.err.println("드라이버 로드 실패!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -61,9 +55,7 @@ public class HRSalary {
 				e.printStackTrace();
 			}
 		}
-
 		scanner.close();
-
 	}
 
 }

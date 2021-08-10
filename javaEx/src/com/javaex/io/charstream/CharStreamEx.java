@@ -10,8 +10,8 @@ public class CharStreamEx {
 	static String filename = rootPath + "char.txt";
 	
 	public static void main(String[] args) {
-//		writeTest();
-		readTest();
+		writeTest();
+//		readTest();
 		
 	
 	}
