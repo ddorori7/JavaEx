@@ -1,6 +1,6 @@
 package com.javaex.jdbc.oracle.dao;
 
-//	VO 객체
+//	VO 객체(Value Object) = DTO(Data Access Object) 
 //	- 처리 로직을 갖지 않는다
 //	- 순수 데이터를 가지는 객체
 //	- 기본 생성자가 있어야 한다
