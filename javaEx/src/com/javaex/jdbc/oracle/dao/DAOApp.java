@@ -9,10 +9,10 @@ public class DAOApp {
 	public static void main(String[] args) {
 //		listAuthors();
 		
-//		insertAuthor();
+		insertAuthor();
 //		updateAuthor();
 //		deleteAuthor();
-		searchAuthor();
+//		searchAuthor();
 		
 //		listAuthors();
 	}

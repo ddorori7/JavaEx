@@ -129,7 +129,6 @@ public class AuthorDAOImplOracle implements AuthorDAO {
 				e.printStackTrace();
 			}
 		}
-
 		return 1 == insertedCount;
 	}
 
