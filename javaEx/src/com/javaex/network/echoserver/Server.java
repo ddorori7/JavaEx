@@ -12,8 +12,8 @@ public class Server {
 		try {
 			// 바인드: 주소와 포트 연결
 			serverSocket = new ServerSocket();
-			// 모든 ip의 10000 포트 허용
-			InetSocketAddress ip = new InetSocketAddress("192.168.0.16", 10000);
+			// 모든 ip(*)의 10000 포트 허용
+			InetSocketAddress ip = new InetSocketAddress("192.168.0.28", 10000);
 			serverSocket.bind(ip);
 
 			System.out.println("<서버 시작>");

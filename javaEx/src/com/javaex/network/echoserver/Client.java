@@ -24,11 +24,11 @@ public class Client {
 			socket = new Socket();
 
 			// 시작 메시지
-			System.out.println("<클라이인트 시작>");
+			System.out.println("<클라이언트 시작>");
 			System.out.println("[연결 요청]");
 
 			// 접속 시도
-			InetSocketAddress server = new InetSocketAddress("192.168.0.5", 10000);
+			InetSocketAddress server = new InetSocketAddress("192.168.0.28", 10000);
 			socket.connect(server);
 			System.out.println("[서버에 연결되었습니다.]");
 
@@ -54,13 +54,13 @@ public class Client {
 
 				// 서버로 메시지 전송
 				bw.write(message);
-				bw.newLine();
+				bw.newLine(); //버퍼에 개행 삽입 > 잘못 입력받는 오류를 없애기 위해서
 				bw.flush();
 				System.out.println("서버로 전송한 메시지:" + message);
 
 				String echoMsg = br.readLine(); // 한 줄 읽기
 				System.out.println("서버로부터 Echo 된 메시지:" + echoMsg);
-			}
+			} // while end
 
 			scanner.close();
 			br.close();
@@ -70,6 +70,7 @@ public class Client {
 			System.out.println("<클라이언트 종료>");
 		} catch (ConnectException e) {
 			System.err.println("[접속이 거부되었습니다.]");
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
