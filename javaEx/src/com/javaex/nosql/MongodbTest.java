@@ -114,7 +114,7 @@ public class MongodbTest {
 		// Document 출력
 		System.out.println("DOC:" + doc);
 		// 필드 확인 get("필드명")
-		System.out.printf("_id: %s, name: %s, speies: %s, gender: %s%n", doc.get("_id"), doc.get("name"),
+		System.out.printf("_id: %s, name: %s, species: %s, gender: %s%n", doc.get("_id"), doc.get("name"),
 				doc.get("species"), doc.get("gender"));
 		// Document -> JSON으로 출력 : toJson
 		System.out.println("JSON:" + doc.toJson());
